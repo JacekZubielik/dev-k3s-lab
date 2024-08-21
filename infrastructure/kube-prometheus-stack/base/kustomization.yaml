@@ -1,0 +1,69 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# metadata:
+#   annotations:
+#     argocd.argoproj.io/compare-options: IgnoreExtraneous
+
+resources:
+- resources/pv.yaml
+- resources/pvc.yaml
+- resources/servicemonitor.yaml
+- resources/volume.yaml
+# - resources/pve-scrape-config.yaml
+# - resources/volume.snapshot.yaml
+
+generators:
+- ksops-generator.yaml
+
+configMapGenerator:
+- name: prometheus-server-conf
+  files:
+  - resources/scrape_configs.yaml
+
+# - name: grafana-dashboards
+#   files:
+#   - dashboards/argocd-performance.json
+#   - dashboards/authentik.json
+
+# patches:
+# - patch: |-
+#     - op: add
+#       path: "/metadata/annotations/argocd.argoproj.io~1sync-options"
+#       value: "Replace=true"
+#   target:
+#     group: apiextensions.k8s.io
+#     kind: CustomResourceDefinition
+#     name: alertmanagers.monitoring.coreos.com
+#     version: v1
+
+# - patch: |-
+#     - op: add
+#       path: "/metadata/annotations/argocd.argoproj.io~1sync-options"
+#       value: "Replace=true"
+#   target:
+#     group: apiextensions.k8s.io
+#     kind: CustomResourceDefinition
+#     name: prometheuses.monitoring.coreos.com
+#     version: v1
+
+# - patch: |-
+#     - op: add
+#       path: "/metadata/annotations/argocd.argoproj.io~1sync-options"
+#       value: "Replace=true"
+#   target:
+#     group: apiextensions.k8s.io
+#     kind: CustomResourceDefinition
+#     name: thanosrulers.monitoring.coreos.com
+#     version: v1
+
+# - patch: |-
+#     - op: add
+#       path: "/metadata/annotations/argocd.argoproj.io~1sync-options"
+#       value: "Replace=true"
+#   target:
+#     group: apiextensions.k8s.io
+#     kind: CustomResourceDefinition
+#     name: prometheusagents.monitoring.coreos.com
+#     version: v1
