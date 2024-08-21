@@ -1,0 +1,29 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: cert-manager
+
+# metadata:
+#   annotations:
+#     cert-manager.io/inject-ca-from-secret: "lb/cert-manager-webhook-tls"
+#     argocd.argoproj.io/compare-options: IgnoreExtraneous
+
+# resources:
+# - resources/cert.default.svc.yaml
+# - resources/issuer.default.svc.yaml
+# - resources/issuer.k3s.ca-cluster.yaml
+# - resources/servicemonitor.yaml
+
+generators:
+- ksops-generator.yaml
+
+patches:
+- path: patches/mutation-patch.yaml
+  target:
+    kind: Deployment
+- path: patches/remove-instance-patch.yaml
+  target:
+    kind: CustomResourceDefinition
+    labelSelector: app.kubernetes.io/instance=cert-manager
+
+
