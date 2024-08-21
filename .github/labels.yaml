@@ -5,7 +5,7 @@
   description: >-
     Changes made in the github directory
 - name: area/bootstrap
-  color: "ee0000"
+  color: "ed0a0a"
   description: >-
     Changes made in the bootstrap directory
 - name: area/project
@@ -29,7 +29,7 @@
   description: >-
     Changes made in the user directory
 - name: area/infrastructure
-  color: "009900"
+  color: "fd670d"
   description: >-
     Changes made in the infrastructure directory
 # # Renovate
@@ -70,7 +70,7 @@
   description: >-
     Denotes a PR that changes 500-999 lines, ignoring generated files.
 - name: size/XXL
-  color: "ee0000"
+  color: "900f6"
   description: >-
     Denotes a PR that changes 1000+ lines, ignoring generated files.
 # Uncategorized
