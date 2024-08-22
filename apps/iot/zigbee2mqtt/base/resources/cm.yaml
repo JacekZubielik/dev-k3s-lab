@@ -25,9 +25,9 @@ data:
       reject_unauthorized: false
       version: 5
       include_device_information: true
-      ca: /cert/ca.crt
-      cert: /cert/client.crt
-      key: /cert/client.key
+      # ca: /cert/ca.crt
+      # cert: /cert/client.crt
+      # key: /cert/client.key
     serial:
       port: /dev/ttyUSB0
       adapter: zstack
