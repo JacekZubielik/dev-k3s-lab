@@ -3,17 +3,17 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: '4'
+    argocd.argoproj.io/sync-wave: '3'
   finalizers:
   - resources-finalizer.argocd.argoproj.io
   labels:
     app.kubernetes.io/managed-by: argocd-autopilot
-    app.kubernetes.io/name: esphome
-  name: esphome
+    app.kubernetes.io/name: home-assistant
+  name: home-assistant
   namespace: argocd
 spec:
   destination:
-    namespace: esphome
+    namespace: home-assistant
     name: in-cluster
   ignoreDifferences:
   - group: argoproj.io
@@ -22,9 +22,9 @@ spec:
     kind: Application
   project: iot
   source:
-    path: apps/iot/esphome/overlays/prod
+    path: apps/iot/home-assistant/overlays/prod
     repoURL: https://github.com/JacekZubielik/dev-k3s-lab
-    targetRevision: main
+    targetRevision: hass
   syncPolicy:
     automated:
       prune: true
