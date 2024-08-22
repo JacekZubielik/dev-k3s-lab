@@ -68,7 +68,7 @@ data:
       availability_timeout: 0
       ikea_ota_use_test_url: false
       last_seen: ISO_8601
-      log_level: debug
+      log_level: info
       log_syslog:
         app_name: Zigbee2MQTT
         eol: /n
