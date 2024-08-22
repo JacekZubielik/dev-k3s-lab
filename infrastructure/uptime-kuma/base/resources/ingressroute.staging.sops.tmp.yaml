@@ -1,0 +1,46 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+    annotations:
+        argocd.argoproj.io/sync-wave: "3"
+        cert-manager.io/cluster-issuer: letsencrypt-staging
+        external-dns.alpha.kubernetes.io/target: monitoring.anotherlife.org.pl
+        kubernetes.io/ingress.class: traefik-external
+    name: uptime-kuma-staging
+    namespace: uptime-kuma
+spec:
+    entryPoints:
+        - websecure
+    routes:
+        - kind: Rule
+          match: Host(`uptime.monitoring.anotherlife.org.pl`)
+          middlewares:
+            - name: security
+              namespace: traefik
+          services:
+            - kind: TraefikService
+              name: uptime-kuma
+              namespace: uptime-kuma
+    tls:
+        domains:
+            - main: monitoring.anotherlife.org.pl
+              sans:
+                - .monitoring.anotherlife.org.pl
+        options:
+            name: tls-ver13
+            namespace: traefik
+        secretName: uptime-kuma-cf-staging
+---
+apiVersion: traefik.io/v1alpha1
+kind: TraefikService
+metadata:
+    annotations:
+        argocd.argoproj.io/sync-wave: "2"
+    name: uptime-kuma
+    namespace: uptime-kuma
+spec:
+    weighted:
+        services:
+            - name: uptime-kuma
+              port: 3001
+              weight: 1
