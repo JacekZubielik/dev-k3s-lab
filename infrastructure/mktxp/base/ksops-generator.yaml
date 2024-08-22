@@ -6,4 +6,3 @@ metadata:
 type: Opaque
 files:
 - secrets/secret.sops.yaml
-
