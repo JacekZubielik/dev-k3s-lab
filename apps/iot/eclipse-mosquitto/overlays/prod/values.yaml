@@ -35,7 +35,7 @@ service:
     prometheus.io/scrape: "true"
     prometheus.io/port: 9100
   labels: {}
-  type: ClusterIP # LoadBalancer
+  type: LoadBalancer
   externalIPs: # []
     - 192.168.40.189
   # - 192.168.40.110
