@@ -1,0 +1,18 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+    annotations:
+        argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+        argocd.argoproj.io/sync-wave: "10"
+    name: home-assistant
+    namespace: argocd
+spec:
+    issuerRef:
+        kind: ClusterIssuer
+        name: letsencrypt-production
+    commonName: hass.iot.anotherlife.org.pl
+    dnsNames:
+        - hass.iot.anotherlife.org.pl
+    secretName: home-assistant-cf-production
+    duration: 2160h0m0s
+    renewBefore: 720h0m0s
