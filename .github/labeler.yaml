@@ -23,3 +23,7 @@ area/apps/user:
 area/infrastructure:
 - changed-files:
   - any-glob-to-any-file: "infrastructure/**/*"
+feature:
+- head-branch: ['^feature', 'feature']
+release:
+- base-branch: 'main'
