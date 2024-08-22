@@ -24,7 +24,7 @@ spec:
   source:
     path: apps/iot/home-assistant/overlays/prod
     repoURL: https://github.com/JacekZubielik/dev-k3s-lab
-    targetRevision: hass
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
