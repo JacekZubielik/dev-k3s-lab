@@ -27,3 +27,4 @@ data:
     require_certificate true
     socket_domain ipv4
     use_identity_as_username false
+    password_file /mosquitto/password_file
