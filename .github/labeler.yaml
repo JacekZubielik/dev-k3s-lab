@@ -24,6 +24,6 @@ area/infrastructure:
 - changed-files:
   - any-glob-to-any-file: "infrastructure/**/*"
 feature:
-  - head-branch: ['^feature', 'feature']
+- head-branch: ['^feature', 'feature']
 release:
-  - base-branch: 'main'
+- base-branch: 'main'
