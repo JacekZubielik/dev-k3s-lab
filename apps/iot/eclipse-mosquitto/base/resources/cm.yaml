@@ -15,19 +15,18 @@ data:
     autosave_interval 1800
     cafile /mosquitto/config/certs/ca.crt
     certfile /mosquitto/config/certs/server.crt
+    connection_messages true
     keyfile /mosquitto/config/certs/server.key
     listener 8883 0.0.0.0
     log_dest file /mosquitto/log/mosquitto.log
     log_dest stdout
     log_timestamp true
+    password_file /mosquitto/password_file
     persistence true
     persistence_file mosquitto.db
     persistence_location /mosquitto/data/
     pid_file /mosquitto/mosquitto.pid
     protocol mqtt
-    require_certificate true
+    require_certificate false
     socket_domain ipv4
     use_identity_as_username true
-    use_identity_as_username true
-    password_file /mosquitto/password_file
-    connection_messages true
