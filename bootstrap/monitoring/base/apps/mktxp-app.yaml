@@ -24,7 +24,7 @@ spec:
   source:
     path: infrastructure/mktxp/overlays/prod
     repoURL: https://github.com/JacekZubielik/dev-k3s-lab
-    targetRevision: main
+    targetRevision: mktxp
   syncPolicy:
     automated:
       prune: true
