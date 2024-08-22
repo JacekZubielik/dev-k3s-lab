@@ -7,7 +7,7 @@ resources:
 
 helmCharts:
 - name: mosquitto
-  version: 0.0.5
+  version: 0.0.6
   repo: https://jacekzubielik.github.io/jz-helm-charts
   includeCRDs: false
   namespace: mosquitto
