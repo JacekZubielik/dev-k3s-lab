@@ -4,5 +4,5 @@ kind: Kustomization
 resources:
 - apps/eclipse-mosquitto-app.yaml
 - apps/zigbee2mqtt-app.yaml
-# - apps/esphome-app.yaml
+- apps/esphome-app.yaml
 # - apps/home-assistant-app.yaml
