@@ -26,9 +26,9 @@ podSecurityContext:
     - ALL
 
 securityContext:
-  runAsUser: 999
-  runAsGroup: 999
-  fsGroup: 999
+  runAsUser: 1883 # 999
+  runAsGroup: 1883 # 999
+  fsGroup: 1883 # 999
 
 service:
   annotations:
