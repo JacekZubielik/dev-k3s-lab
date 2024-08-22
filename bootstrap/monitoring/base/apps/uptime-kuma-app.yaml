@@ -24,7 +24,7 @@ spec:
   source:
     path: infrastructure/uptime-kuma/overlays/prod
     repoURL: https://github.com/JacekZubielik/dev-k3s-lab
-    targetRevision: main
+    targetRevision: kuma
   syncPolicy:
     automated:
       prune: true
