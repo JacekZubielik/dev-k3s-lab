@@ -26,6 +26,6 @@ data:
     persistence_location /mosquitto/data/
     pid_file /mosquitto/mosquitto.pid
     protocol mqtt
-    require_certificate false
+    require_certificate true
     socket_domain ipv4
     use_identity_as_username true
