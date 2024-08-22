@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/name: mosquitto
 data:
   mosquitto.conf: |-
-    allow_anonymous false
+    allow_anonymous true
     allow_zero_length_clientid true
     autosave_interval 1800
     cafile /mosquitto/config/certs/ca.crt
