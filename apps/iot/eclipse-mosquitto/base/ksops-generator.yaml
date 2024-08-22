@@ -6,3 +6,4 @@ metadata:
 type: Opaque
 files:
 - resources/cm.cert.sops.yaml
+- secrets/secret.sops.yaml
