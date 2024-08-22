@@ -19,7 +19,7 @@ podAnnotations: {}
 podSecurityContext:
   runAsUser: 1883
   runAsGroup: 1883
-  runAsNonRoot: true
+  runAsNonRoot: false
   readOnlyRootFilesystem: false
   capabilities:
     drop:
