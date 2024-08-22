@@ -24,7 +24,7 @@ spec:
   source:
     path: apps/trade/binance-proxy/overlays/prod
     repoURL: https://github.com/JacekZubielik/dev-k3s-lab
-    targetRevision: binance
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
