@@ -24,7 +24,7 @@ spec:
   source:
     path: apps/iot/zigbee2mqtt/overlays/prod
     repoURL: https://github.com/JacekZubielik/dev-k3s-lab
-    targetRevision: zigbee2mqtt
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
