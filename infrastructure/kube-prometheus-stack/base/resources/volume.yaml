@@ -36,8 +36,6 @@ spec:
 apiVersion: longhorn.io/v1beta2
 kind: Volume
 metadata:
-  finalizers:
-  - longhorn.io
   annotations:
     argocd.argoproj.io/hook: PreSync
     # argocd.argoproj.io/sync-wave: "-1"
@@ -50,8 +48,8 @@ metadata:
   name: pvc-kube-grafana
   namespace: longhorn-system
 spec:
-  backingImage: 'pvc-kube-grafana'
-  dataLocality: 'best-effort'
+  # backingImage: pvc-kube-grafana
+  dataLocality: best-effort
   diskSelector:
   - data
   # - fast
@@ -85,7 +83,7 @@ metadata:
   name: pvc-kube-prometheus
   namespace: longhorn-system
 spec:
-  backingImage: pvc-kube-prometheus
+  # backingImage: pvc-kube-prometheus
   dataLocality: "best-effort"
   diskSelector:
   - data
