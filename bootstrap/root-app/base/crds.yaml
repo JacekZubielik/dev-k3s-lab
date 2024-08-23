@@ -6,24 +6,25 @@ metadata:
     argocd.argoproj.io/sync-wave: "-3"
   finalizers:
   - resources-finalizer.argocd.argoproj.io
-  labels:
-    app.kubernetes.io/managed-by: argocd-autopilot
-    app.kubernetes.io/name: crds
+  # labels:
+  #   app.kubernetes.io/managed-by: argocd-autopilot
+  #   app.kubernetes.io/name: crds
   name: crds
   namespace: argocd
 spec:
   destination:
     namespace: argocd
     name: in-cluster
-  ignoreDifferences:
-  - group: argoproj.io
-    jsonPointers:
-    - /status
-    kind: Application
+  # ignoreDifferences:
+  # - group: argoproj.io
+  #   jsonPointers:
+  #   - /status
+  #   kind: Application
   project: bootstrap
   source:
     path: bootstrap/crds/overlays/prod
     repoURL: https://github.com/JacekZubielik/dev-k3s-lab
+    targetRevision: main
   syncPolicy:
     automated:
       # allowEmpty: true
@@ -31,12 +32,12 @@ spec:
       prune: true
     syncOptions:
     - allowEmpty=true
-status:
-  health: {}
-  summary: {}
-  sync:
-    comparedTo:
-      destination: {}
-      source:
-        repoURL: ""
-    status: ""
+# status:
+#   health: {}
+#   summary: {}
+#   sync:
+#     comparedTo:
+#       destination: {}
+#       source:
+#         repoURL: ""
+#     status: ""
