@@ -20,7 +20,6 @@ spec:
   diskSelector:
   - data
   # - fast
-  # engineImage: longhornio/longhorn-engine:v1.6.2
   # fromBackup: "s3://k3s-longhorn-backup@us-east-1/?backup=backup-94ef25e2fd31440f&volume=pvc-esphome-data"
   frontend: blockdev
   # migratable: false
@@ -31,4 +30,4 @@ spec:
   # restoreVolumeRecurringJob: enabled
   # revisionCounterDisabled: false
   size: '10737418240'
-  snapshotMaxCount: 10
+  snapshotMaxCount: 20

@@ -20,7 +20,6 @@ spec:
   diskSelector:
   - data
   # - fast
-  # engineImage: longhornio/longhorn-engine:v1.7.0
   # fromBackup: "s3://k3s-longhorn-backup@us-east-1/?backup=system-backup-6e0044ee5d464ba9&volume=pvc-mosquitto"
   frontend: blockdev
   # migratable: true
@@ -31,4 +30,4 @@ spec:
   restoreVolumeRecurringJob: enabled
   # revisionCounterDisabled: false
   size: '1073741824'
-  snapshotMaxCount: 10
+  snapshotMaxCount: 20

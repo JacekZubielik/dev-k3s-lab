@@ -20,7 +20,6 @@ spec:
   diskSelector:
   - data
   # - fast
-  engineImage: longhornio/longhorn-engine:v1.7.0
   # fromBackup: "s3://k3s-longhorn-backup@us-east-1/?backup=backup-3bc3347310464b5b&volume=pvc-authentik-psql"
   frontend: blockdev
   # migratable: false
@@ -31,7 +30,7 @@ spec:
   restoreVolumeRecurringJob: enabled
   # revisionCounterDisabled: false
   size: '8589934592'
-  snapshotMaxCount: 10
+  snapshotMaxCount: 20
 
 ---
 apiVersion: longhorn.io/v1beta2
@@ -55,7 +54,6 @@ spec:
   diskSelector:
   - data
   # - fast
-  engineImage: longhornio/longhorn-engine:v1.7.0
   # fromBackup: "s3://k3s-longhorn-backup@us-east-1/?backup=backup-7a3e462c5bca4c8c&volume=pvc-authentik-redis"
   frontend: blockdev
   # migratable: false
@@ -66,4 +64,4 @@ spec:
   restoreVolumeRecurringJob: enabled
   # revisionCounterDisabled: false
   size: '8589934592'
-  snapshotMaxCount: 10
+  snapshotMaxCount: 20
