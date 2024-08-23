@@ -26,9 +26,9 @@ spec:
     repoURL: https://github.com/JacekZubielik/dev-k3s-lab
   syncPolicy:
     automated:
-      allowEmpty: true
-      # prune: true
+      # allowEmpty: true
       # selfHeal: true
+      prune: true
     syncOptions:
     - allowEmpty=true
 status:
