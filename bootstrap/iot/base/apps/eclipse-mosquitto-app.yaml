@@ -4,11 +4,11 @@ kind: Application
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: '1'
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
-  labels:
-    app.kubernetes.io/managed-by: argocd-autopilot
-    app.kubernetes.io/name: mosquitto
+  # finalizers:
+  # - resources-finalizer.argocd.argoproj.io
+  # labels:
+  #   app.kubernetes.io/managed-by: argocd-autopilot
+  #   app.kubernetes.io/name: mosquitto
   name: mosquitto
   namespace: argocd
 spec:

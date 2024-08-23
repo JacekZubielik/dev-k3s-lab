@@ -1,0 +1,15 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+
+helmCharts:
+- name: syncthing
+  version: 0.0.2
+  repo: https://jacekzubielik.github.io/jz-helm-charts
+  includeCRDs: false
+  namespace: syncthing
+  releaseName: syncthing
+  valuesFile: values.yaml

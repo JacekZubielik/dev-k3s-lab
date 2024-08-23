@@ -6,9 +6,9 @@ metadata:
     argocd.argoproj.io/sync-wave: "-1"
   finalizers:
   - resources-finalizer.argocd.argoproj.io
-  labels:
-    app.kubernetes.io/managed-by: argocd-autopilot
-    app.kubernetes.io/name: monitoring
+  # labels:
+  #   app.kubernetes.io/managed-by: argocd-autopilot
+  #   app.kubernetes.io/name: monitoring
   name: monitoring
   namespace: argocd
 spec:
@@ -31,12 +31,12 @@ spec:
       # selfHeal: true
     syncOptions:
     - allowEmpty=true
-status:
-  health: {}
-  summary: {}
-  sync:
-    comparedTo:
-      destination: {}
-      source:
-        repoURL: ""
-    status: ""
+# status:
+#   health: {}
+#   summary: {}
+#   sync:
+#     comparedTo:
+#       destination: {}
+#       source:
+#         repoURL: ""
+#     status: ""

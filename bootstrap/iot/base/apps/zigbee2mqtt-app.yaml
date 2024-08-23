@@ -4,11 +4,11 @@ kind: Application
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: '2'
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
-  labels:
-    app.kubernetes.io/managed-by: argocd-autopilot
-    app.kubernetes.io/name: zigbee2mqtt
+  # finalizers:
+  # - resources-finalizer.argocd.argoproj.io
+  # labels:
+  #   app.kubernetes.io/managed-by: argocd-autopilot
+  #   app.kubernetes.io/name: zigbee2mqtt
   name: zigbee2mqtt
   namespace: argocd
 spec:
