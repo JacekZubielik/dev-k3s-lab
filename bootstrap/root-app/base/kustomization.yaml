@@ -7,5 +7,5 @@ resources:
 - infra.yaml
 # - iot.yaml
 # - media.yaml
-- monitoring.yaml
+# - monitoring.yaml
 # - trade.yaml
