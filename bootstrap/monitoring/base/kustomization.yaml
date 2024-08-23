@@ -4,6 +4,6 @@ kind: Kustomization
 
 resources:
 - apps/kube-prometheus-stack-app.yaml
-# - apps/mktxp-app.yaml
-# - apps/uptime-kuma-app.yaml
+- apps/mktxp-app.yaml
+- apps/uptime-kuma-app.yaml
 # - apps/loki-app.yaml

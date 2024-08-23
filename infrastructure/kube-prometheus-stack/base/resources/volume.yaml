@@ -15,7 +15,7 @@ metadata:
   name: pvc-kube-alertmanager
   namespace: longhorn-system
 spec:
-  dataLocality: "best-effort"
+  dataLocality: best-effort
   diskSelector:
   - data
   # - fast
@@ -81,7 +81,7 @@ metadata:
   namespace: longhorn-system
 spec:
   backingImage: pvc-kube-prometheus
-  dataLocality: "best-effort"
+  dataLocality: best-effort
   diskSelector:
   - data
   # - fast
