@@ -10,5 +10,5 @@ patches:
 - path: infra-branch.yaml
 # - path: iot-branch.yaml
 # - path: media-branch.yaml
-- path: monitoring-branch.yaml
+# - path: monitoring-branch.yaml
 # - path: trade-branch.yaml
