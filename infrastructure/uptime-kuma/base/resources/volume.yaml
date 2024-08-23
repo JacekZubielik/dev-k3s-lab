@@ -8,7 +8,6 @@ metadata:
     argocd.argoproj.io/sync-wave: "-1"
   labels:
     longhornvolume: pvc-kuma
-    # recurring-job-group.longhorn.io/default: enabled
     recurring-job-group.longhorn.io/group1: enabled
     recurring-job.longhorn.io/24-hour-snapshots: enabled
     recurring-job.longhorn.io/48-hour-backups: enabled
@@ -27,7 +26,7 @@ spec:
   - fast
   # - storage
   # numberOfReplicas: 1
-  restoreVolumeRecurringJob: enabled
+  # restoreVolumeRecurringJob: enabled
   # revisionCounterDisabled: false
   size: '8589934592'
   snapshotMaxCount: 20

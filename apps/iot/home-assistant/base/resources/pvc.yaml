@@ -3,7 +3,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: pvc-ha-data
-  namespace: home-assistant
+  # namespace: home-assistant
 spec:
   # dataSource:
   #   name: pvc-ha-data-backup

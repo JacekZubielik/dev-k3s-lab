@@ -7,5 +7,5 @@ resources:
 - apps/csi-external-snapshotter-app.yaml
 - apps/longhorn-app.yaml
 - apps/minio-app.yaml
-# - apps/authentik-app.yaml
-# - apps/traefik-app.yaml
+- apps/authentik-app.yaml
+- apps/traefik-app.yaml

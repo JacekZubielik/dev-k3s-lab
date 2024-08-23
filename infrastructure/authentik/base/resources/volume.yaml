@@ -8,15 +8,14 @@ metadata:
     argocd.argoproj.io/sync-wave: "-1"
   labels:
     longhornvolume: pvc-authentik-psql
-    # recurring-job-group.longhorn.io/default: enabled
     recurring-job-group.longhorn.io/group1: enabled
     recurring-job.longhorn.io/24-hour-snapshots: enabled
     recurring-job.longhorn.io/48-hour-backups: enabled
   name: pvc-authentik-psql
   namespace: longhorn-system
 spec:
-  backingImage: "pvc-authentik-psql"
-  dataLocality: "best-effort"
+  backingImage: pvc-authentik-psql
+  dataLocality: best-effort
   diskSelector:
   - data
   # - fast
@@ -27,7 +26,7 @@ spec:
   - fast
   # - storage
   # numberOfReplicas: 2
-  restoreVolumeRecurringJob: enabled
+  # restoreVolumeRecurringJob: enabled
   # revisionCounterDisabled: false
   size: '8589934592'
   snapshotMaxCount: 20
@@ -42,15 +41,14 @@ metadata:
     argocd.argoproj.io/sync-wave: "-1"
   labels:
     longhornvolume: pvc-authentik-redis
-    # recurring-job-group.longhorn.io/default: enabled
     recurring-job-group.longhorn.io/group1: enabled
     recurring-job.longhorn.io/24-hour-snapshots: enabled
     recurring-job.longhorn.io/48-hour-backups: enabled
   name: pvc-authentik-redis
   namespace: longhorn-system
 spec:
-  backingImage: "pvc-authentik-redis"
-  dataLocality: "best-effort"
+  backingImage: pvc-authentik-redis
+  dataLocality: best-effort
   diskSelector:
   - data
   # - fast
@@ -61,7 +59,7 @@ spec:
   - fast
   # - storage
   # numberOfReplicas: 2
-  restoreVolumeRecurringJob: enabled
+  # restoreVolumeRecurringJob: enabled
   # revisionCounterDisabled: false
   size: '8589934592'
   snapshotMaxCount: 20
