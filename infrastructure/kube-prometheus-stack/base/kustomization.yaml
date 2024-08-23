@@ -11,7 +11,7 @@ resources:
 - resources/pvc.yaml
 - resources/servicemonitor.yaml
 - resources/volume.yaml
-# - resources/backing-image.yaml
+- resources/backing-image.yaml
 # - resources/pve-scrape-config.yaml
 # - resources/volume.snapshot.yaml
 

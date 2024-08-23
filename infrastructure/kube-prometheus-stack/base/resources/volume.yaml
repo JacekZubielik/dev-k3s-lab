@@ -5,8 +5,8 @@ metadata:
   finalizers:
   - longhorn.io
   annotations:
-    argocd.argoproj.io/hook: PreSync
-    # argocd.argoproj.io/sync-wave: "-1"
+    # argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/sync-wave: "-1"
   labels:
     longhornvolume: pvc-kube-alertmanager
     # recurring-job-group.longhorn.io/default: enabled
@@ -37,8 +37,8 @@ apiVersion: longhorn.io/v1beta2
 kind: Volume
 metadata:
   annotations:
-    argocd.argoproj.io/hook: PreSync
-    # argocd.argoproj.io/sync-wave: "-1"
+    # argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/sync-wave: "-1"
   labels:
     longhornvolume: pvc-kube-grafana
     # recurring-job-group.longhorn.io/default: enabled
@@ -48,12 +48,12 @@ metadata:
   name: pvc-kube-grafana
   namespace: longhorn-system
 spec:
-  # backingImage: pvc-kube-grafana
+  backingImage: pvc-kube-grafana
   dataLocality: best-effort
   diskSelector:
   - data
   # - fast
-  fromBackup: 's3://k3s-longhorn-backup@us-east-1/?backup=backup-5b9118d3e59d4768&volume=pvc-kube-grafana'
+  # fromBackup: 's3://k3s-longhorn-backup@us-east-1/?backup=backup-5b9118d3e59d4768&volume=pvc-kube-grafana'
   frontend: blockdev
   # migratable: false
   nodeSelector:
@@ -83,12 +83,12 @@ metadata:
   name: pvc-kube-prometheus
   namespace: longhorn-system
 spec:
-  # backingImage: pvc-kube-prometheus
+  backingImage: pvc-kube-prometheus
   dataLocality: "best-effort"
   diskSelector:
   - data
   # - fast
-  fromBackup: s3://k3s-longhorn-backup@us-east-1/?backup=backup-c43034e9781042d0&volume=pvc-kube-prometheus
+  # fromBackup: s3://k3s-longhorn-backup@us-east-1/?backup=backup-c43034e9781042d0&volume=pvc-kube-prometheus
   frontend: blockdev
   # migratable: false
   nodeSelector:
