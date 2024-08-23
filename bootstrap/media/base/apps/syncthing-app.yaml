@@ -24,7 +24,7 @@ spec:
   source:
     path: apps/media/syncthing/overlays/prod
     repoURL: https://github.com/JacekZubielik/dev-k3s-lab
-    targetRevision: syncthing
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
