@@ -113,3 +113,7 @@ tolerations: []
 persistence:
   enabled: true
   existingClaim: pvc-zigbee2mqtt-data
+
+config:
+  serial:
+    port: /dev/ttyUSB0
