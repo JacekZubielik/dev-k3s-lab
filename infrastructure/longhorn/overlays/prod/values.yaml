@@ -182,7 +182,7 @@ defaultSettings:
   # -- Number of minutes that Longhorn waits before cleaning up the backing image file when no replicas in the disk are using it.
   backingImageCleanupWaitInterval: "60"
   # -- Number of seconds that Longhorn waits before downloading a backing image file again when the status of all image disk files changes to "failed" or "unknown".
-  backingImageRecoveryWaitInterval: ~
+  backingImageRecoveryWaitInterval: 4
   # -- Percentage of the total allocatable CPU resources on each node to be reserved for each instance manager pod when the V1 Data Engine is enabled. The default value is "12".
   guaranteedInstanceManagerCPU: ~
   # -- Setting that notifies Longhorn that the cluster is using the Kubernetes Cluster Autoscaler.

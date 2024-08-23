@@ -5,7 +5,6 @@ metadata:
   finalizers:
   - longhorn.io
   annotations:
-    # argocd.argoproj.io/hook: PreSync
     argocd.argoproj.io/sync-wave: "-1"
   labels:
     longhornvolume: pvc-kube-alertmanager
@@ -37,7 +36,6 @@ apiVersion: longhorn.io/v1beta2
 kind: Volume
 metadata:
   annotations:
-    # argocd.argoproj.io/hook: PreSync
     argocd.argoproj.io/sync-wave: "-1"
   labels:
     longhornvolume: pvc-kube-grafana
@@ -72,8 +70,7 @@ metadata:
   finalizers:
   - longhorn.io
   annotations:
-    argocd.argoproj.io/hook: PreSync
-    # argocd.argoproj.io/sync-wave: "-1"
+    argocd.argoproj.io/sync-wave: "-1"
   labels:
     longhornvolume: pvc-kube-prometheus
     # recurring-job-group.longhorn.io/default: enabled
