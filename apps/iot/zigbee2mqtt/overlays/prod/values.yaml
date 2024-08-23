@@ -117,3 +117,7 @@ persistence:
 config:
   serial:
     port: /dev/ttyUSB0
+
+hostMounts:
+  - name: sniffer
+    hostPath: /dev/ttyUSB0
