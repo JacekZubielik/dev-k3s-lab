@@ -5,7 +5,7 @@ kind: Kustomization
 resources:
 - crds.yaml
 - infra.yaml
+- monitoring.yaml
 # - iot.yaml
 # - media.yaml
-# - monitoring.yaml
 # - trade.yaml
