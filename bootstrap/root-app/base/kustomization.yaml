@@ -6,6 +6,6 @@ resources:
 - crds.yaml
 - infra.yaml
 - monitoring.yaml
-# - iot.yaml
-# - media.yaml
-# - trade.yaml
+- iot.yaml
+- media.yaml
+- trade.yaml
