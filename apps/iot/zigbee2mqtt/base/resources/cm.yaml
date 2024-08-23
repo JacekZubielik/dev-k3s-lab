@@ -31,7 +31,7 @@ data:
     serial:
       port: /dev/ttyUSB0
       adapter: zstack
-      disable_led: true
+      disable_led: false
     advanced:
       network_key:
         - 237
